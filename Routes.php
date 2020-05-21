@@ -2,16 +2,12 @@
 
 
 Route::set('index', function(){
-    Index::createView();
+    IndexController::createView('home.index');
 });
 
 
-Route::set('about', function(){
-    echo "about page";
-});
-
-Route::set('fuck/you', function(){
-    echo "fuck page";
+Route::set('foo/about', function(){
+    AboutController::createView('about');
 });
 
 
