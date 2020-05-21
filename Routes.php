@@ -2,7 +2,7 @@
 
 
 Route::set('index', function(){
-    echo "index page";
+    Index::createView();
 });
 
 
