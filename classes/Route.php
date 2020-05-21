@@ -10,6 +10,11 @@ class Route
         
         foreach($urlRoute as $url)
         {
+            if($url === '/')
+            {
+                $url = "/index";
+            }
+            
             $url = substr($url, 1);
             break;
         }
