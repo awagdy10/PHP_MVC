@@ -1,6 +1,6 @@
 <?php
 
-class Controller 
+class Controller extends Database
 {
 
     public static function createView($viewName)

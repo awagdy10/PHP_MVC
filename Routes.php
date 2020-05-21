@@ -2,7 +2,7 @@
 
 
 Route::set('index', function(){
-    IndexController::createView('home.index');
+    IndexController::getUsers();
 });
 
 
