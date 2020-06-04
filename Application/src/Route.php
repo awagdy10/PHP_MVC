@@ -3,7 +3,7 @@
 
 class Route 
 {
-    public static function set($route, $closure)
+    public static function get($route, $closure)
     {
 
         $urlRoute = $_SERVER['REQUEST_URI'];
