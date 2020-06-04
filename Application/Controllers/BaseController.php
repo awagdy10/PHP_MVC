@@ -3,7 +3,7 @@
 class BaseController
 {
 
-    public function createView($viewName)
+    public function view($viewName)
     {
         if(strpos($viewName, '.') !== false)
         {
@@ -13,22 +13,23 @@ class BaseController
         {
             $this->returnView($viewName);
         }
+
     }
 
     public function replaceDotWithSlash($viewName)
     {
         $path = str_replace('.', '/', $viewName);
 
-        if(file_exists("Views/". $path . ".php"))
-            require_once("Views/". $path . ".php");
+        if(file_exists(realpath(dirname(__FILE__) . '/../views/'.$path. '.php')))
+            require_once(realpath(dirname(__FILE__) . '/../views/'.$path. '.php'));
         else
             die("view not found");
     }
 
     public function returnView($viewName)
     {
-        if(file_exists("Views/". $viewName . ".php"))
-            require_once("Views/". $viewName . ".php");
+        if(file_exists(realpath(dirname(__FILE__) . '/../views/'.$viewName. '.php')))
+            require_once(realpath(dirname(__FILE__) . '/../views/'.$viewName. '.php'));
         else
             die("view not found");
     }

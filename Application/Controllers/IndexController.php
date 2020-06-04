@@ -3,14 +3,16 @@
 class IndexController extends BaseController 
 {
 
-    public function getUsers()
+    public $controller;
+
+    public function __construct()
     {
-        //         
+        $this->controller = new BaseController();
     }
 
     public function index()
     {
-        die("This is Index from controller");
+        $this->controller->view('about');
     }
 
     
