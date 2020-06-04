@@ -4,14 +4,20 @@ class IndexController extends BaseController
 {
 
     public $controller;
+    public $userModel;
 
     public function __construct()
     {
         $this->controller = new BaseController();
+        $this->userModel  = new User();
     }
 
     public function index()
     {
+
+        $users = $this->userModel->getUsers();
+        var_dump($users);
+        die;
         $user = "user";
         $pla = "hhh";
 

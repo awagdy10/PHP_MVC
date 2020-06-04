@@ -18,6 +18,11 @@ function __autoload($class_name)
         require_once ('Application/Controllers/'.$class_name.'.php');
     }
 
+    if(file_exists('Application/Models/'.$class_name.'.php'))
+    {
+        require_once ('Application/Models/'.$class_name.'.php');
+    }
+
 }
 
 
