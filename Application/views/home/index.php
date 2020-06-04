@@ -1,5 +1,5 @@
 <?php
 
-echo "index view";
+var_dump($pla);
 
 ?>

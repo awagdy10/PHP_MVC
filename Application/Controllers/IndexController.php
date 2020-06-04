@@ -12,7 +12,10 @@ class IndexController extends BaseController
 
     public function index()
     {
-        $this->controller->view('about');
+        $user = "user";
+        $pla = "hhh";
+
+        $this->controller->view('home.index', compact('user', 'pla'));
     }
 
     
