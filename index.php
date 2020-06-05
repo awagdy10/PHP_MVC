@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 
-require_once('Application/routes.php');
+require_once('routes/web.php');
 
 function __autoload($class_name) 
 {
