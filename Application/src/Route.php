@@ -8,17 +8,16 @@ class Route
 
         $urlRoute = $_SERVER['REQUEST_URI'];
         $urlRoute = explode(' ', $urlRoute);
-        
-        foreach($urlRoute as $url)
+
+        $url = $urlRoute[0];
+
+        if($url === '/')
         {
-            if($url === '/')
-            {
-                $url = "/index";
-            }
-            
-            $url = substr($url, 1);
-            break;
+            $url = "/index";
         }
+        $url = substr($url, 1); // removes first char ("/")
+
+        
         if($url === $route) // to get the desired route
         {
             if(strpos($closure, '@') !== false) // is not a function
