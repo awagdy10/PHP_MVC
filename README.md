@@ -2,6 +2,8 @@
 
 # TO DO
 
-1) use spl_autoload_register function.
+1) Parameterized queries in Database.
 
-2) autoload sub directories in controllers and models.
+2) use spl_autoload_register function.
+
+3) autoload sub directories in controllers and models.
